@@ -1,0 +1,20 @@
+from random import randint
+
+f_name = 'task4.txt'
+
+rand_list = [randint(0, 100) for _ in range(randint(0, 100))]
+
+print(rand_list)
+with open(f_name, 'w') as f:
+    f.write("\n".join(map(str, rand_list)))
+
+f_name = []
+with open(f_name, 'r') as f:
+    f_name = f.readlines()
+    f_name = list(map(int, f_name))
+    f_name.sort()
+
+with open(f_name, 'w') as f:
+    f.write("\n".join(map(str, rand_list)))
+
+print(rand_list)
